@@ -4,7 +4,7 @@ export const FeedbackExtension = {
   name: 'Copy',
   type: 'response',
   match: ({ trace }) =>
-    trace.type === 'ext_copy' || trace.payload.name === 'ext_copy',
+    trace.type === 'ext_copy' || trace.payload?.name === 'ext_copy',
   render: ({ trace, element }) => {
     const feedbackContainer = document.createElement('div')
 	
@@ -232,7 +232,7 @@ export const DisclaimerExtension = {
   name: 'Disclaimer',
   type: 'response',
   match: ({ trace }) =>
-    trace.type === 'ext_disclaimer' || trace.payload.name === 'ext_disclaimer',
+    trace.type === 'ext_disclaimer' || trace.payload?.name === 'ext_disclaimer',
   render: ({ trace, element }) => {
     const disclaimerContainer = document.createElement('div')
 
